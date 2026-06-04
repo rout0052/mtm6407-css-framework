@@ -1,0 +1,22 @@
+{
+  "name": "mtm6407-css-framework",
+  "version": "1.0.0",
+  "description": "Contributors: Taro Routly, Taylor Baker, Lauren Brunet, Paul Decker\r Created for MTM6407 - Web Development IV",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/bread.scss css/bread.css",
+    "build": "sass src/bread.scss dist/bread.min.css --style=compressed --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rout0052/mtm6407-css-framework.git"
+  },
+  "keywords": [],
+  "author": "Taro Routly, Taylor Baker, Lauren Brunet, and Paul Decker",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rout0052/mtm6407-css-framework/issues"
+  },
+  "homepage": "https://github.com/rout0052/mtm6407-css-framework#readme"
+}

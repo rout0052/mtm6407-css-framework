@@ -1,5 +1,5 @@
 - Group: variables
-- Assignment 1: Fonts and icons adding, and home page creation
+- Assignment 1: Fonts and icons adding, home page creation
 - Assignment 2: Base styles
 - Assignment 3: Utility classes
 - Assignment 4: Components
@@ -35,6 +35,7 @@
 - border width
 
 ^ use the above for utility classes
+
 
 ## List of semantic tags to cover - Include on the homepage
 - Headings 1-6

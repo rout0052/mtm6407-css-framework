@@ -1,1 +1,37 @@
 @use 'sass:map';
+
+
+$display-type: (
+    'none': none, 
+    'block': block,
+    'flex': flex,
+    'grid': grid,
+    'inline-block': inline-block,
+    'inline-flex': inline-flex,
+    'inline-grid': inline-grid
+);
+
+$content-alignment: (
+    'flex-start': flex-start,
+    'flex-end': flex-end,
+    'center': center,
+    'space-between': space-between,
+    'space-around': space-around,
+    'space-evenly': space-evenly
+);
+
+$cursor-styles: (
+    'none': none,
+    'default': default,
+    'auto': auto,
+    'pointer': pointer,
+    'help': help,
+    'crosshair': crosshair,
+    'grab': grab,
+    'not-allowed': not-allowed,
+    'progress': progress,
+    'text': text,
+    'wait': wait,
+    'zoom-in': zoom-in,
+    'zoom-out': zoom-out
+);

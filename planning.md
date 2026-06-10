@@ -1,8 +1,8 @@
 - Group: variables
-- Assignment 1: Fonts and icons adding, home page creation
-- Assignment 2: Base styles
-- Assignment 3: Utility classes
-- Assignment 4: Components
+- Assignment 1: Fonts and icons adding, home page creation - Paul
+- Assignment 2: Base styles - Taylor
+- Assignment 3: Utility classes - Lauren
+- Assignment 4: Components - Taro
 
 
 ## Variables we need: 
@@ -25,9 +25,7 @@
 ### Display:
 - Basics of block, inline, inline block, grid, flex, none i think
 - Justify and align content
-- align content
-- Show and hide
-- Cursor styles?
+- Cursor styles
 
 ### Borders:
 - border colour (use colour map)

@@ -1,1 +1,5 @@
-// Base styles
+/* Base Styling for Bread.CSS */
+@use 'sass:map';
+@use '../variables/' as variables;
+@use '../components/' as components;
+

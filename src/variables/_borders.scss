@@ -1,1 +1,22 @@
 @use 'sass:map';
+
+$border-style: (
+    'none': none,
+    'dotted': dotted,
+    'dashed': dashed,
+    'solid': solid,
+    'double': double,
+    'inset': inset,
+    'outset': outset
+);
+
+$border-width: (
+    'none': 0pt,
+    'xs': 1pt,
+    'sm': 2pt,
+    'md': 4pt,
+    'lg': 8pt,
+    'xl': 16pt
+);
+
+// When doing utility classes, do a loop of border colours !!!

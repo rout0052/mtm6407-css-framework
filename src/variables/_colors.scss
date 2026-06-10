@@ -1,1 +1,27 @@
 @use 'sass:map';
+
+$theme-colors: (
+    'primary': #b7c4d1,
+    'secondary': #574435,
+    'neutral': #e6e0d6,
+    'success': #bdc4bb,
+    'danger': #fdbfb2,
+    'warning': #e4de94,
+    'info': #cfb6db,
+    'light': #eeeeee,
+    'dark': #333333
+);
+
+$theme-colors-hovers: (
+    'primary': #587089,
+    'secondary': #c9b5a6,
+    'neutral': #e6cfa7,
+    'success': #586255,
+    'danger': #e46d53,
+    'warning': #ede364,
+    'info': #9267a6,
+    'light': #c2c2c2,
+    'dark': #242424
+);
+
+

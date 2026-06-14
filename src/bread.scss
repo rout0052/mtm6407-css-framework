@@ -3,3 +3,9 @@
 @use './icons' as icons;
 @use './variables' as variables;
 @use './components' as components;
+
+@import 'fonts/index';
+@import 'icons/index';
+@import 'variables/index';
+@import 'base/index';
+@import 'components/index';

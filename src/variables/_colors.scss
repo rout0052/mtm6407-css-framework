@@ -25,3 +25,20 @@ $theme-colors-hovers: (
 );
 
 
+@each $name, $color in $theme-colors{
+    .bg-#{$name}{
+        background-color: #{$color};
+    }
+}
+
+@each $name, $color in $theme-colors-hovers{
+    .bg-hover-#{$name}:hover{
+        background-color: #{$color};
+    }
+}
+
+@each $name, $color in $theme-colors{
+    .border-color-#{$name}{
+        border-color: #{$color};
+    }
+}

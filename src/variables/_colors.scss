@@ -32,7 +32,7 @@ $theme-colors-hovers: (
 }
 
 @each $name, $color in $theme-colors-hovers{
-    .bg-#{$name}:hover{
+    .bg-hover-#{$name}:hover{
         background-color: #{$color};
     }
 }

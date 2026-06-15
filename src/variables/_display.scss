@@ -35,3 +35,29 @@ $cursor-styles: (
     'zoom-in': zoom-in,
     'zoom-out': zoom-out
 );
+
+@each $name, $display in $display-type{
+    .display-#{$name}{
+        display: #{$display};
+    }
+}
+
+@each $name, $align in $content-alignment{
+    .align-#{$name}{
+        align-content: #{$align};
+    }
+
+    .justify-#{$name}{
+        justify-content: #{$align};
+    }
+}
+
+@each $name, $cursor in $cursor-styles{
+    .cursor-#{$name}{
+        cursor: #{$cursor};
+    }
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}

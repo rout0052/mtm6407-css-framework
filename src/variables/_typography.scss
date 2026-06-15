@@ -34,3 +34,26 @@ $text-alignment: (
     'justify': justify
 );
 
+@each $name, $font in $fonts{
+    .font-#{$name}{
+        font-family: #{$font};
+    }
+}
+
+@each $name, $size in $font-size{
+    .font-size-#{$name}{
+        font-size: #{$size};
+    }
+}
+
+@each $name, $weight in $font-weight{
+    .font-weight-#{$name}{
+        font-weight: #{$weight};
+    }
+};
+
+@each $name, $align in $text-alignment{
+    .text-align-#{$name}{
+        text-align: #{$align};
+    }
+};

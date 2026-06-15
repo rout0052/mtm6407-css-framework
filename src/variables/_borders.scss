@@ -20,3 +20,15 @@ $border-width: (
 );
 
 // When doing utility classes, do a loop of border colours !!!
+
+@each $name, $style in $border-style{
+    .border-style-#{$name}{
+        border-style: #{$style};
+    }
+}
+
+@each $name, $size in $border-width{
+    .border-width-#{$name}{
+        border-width: #{$size};
+    }
+}

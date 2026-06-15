@@ -3,3 +3,391 @@
 @use '../variables/' as variables;
 @use '../components/' as components;
 
+
+// GLOBAL
+body {
+    margin: map.get(variables.$spacing-sizes, 'none');
+    padding: map.get(variables.$spacing-sizes, 'none');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+
+    font-family: map.get(variables.$fonts, 'body'), sans-serif;
+    font-size: map.get(variables.$font-size, 'sm');
+    font-weight: map.get(variables.$font-weight, 'regular');
+    line-height: 1.6;
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: map.get(variables.$spacing-sizes, 'md');
+
+    color: map.get(variables.$theme-colors, 'secondary');
+
+    font-family: map.get(variables.$fonts, 'heading'), serif;
+    font-weight: map.get(variables.$font-weight, 'bold');
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: map.get(variables.$font-size, '2xl');
+}
+
+h2 {
+    font-size: map.get(variables.$font-size, 'xl');
+}
+
+h3 {
+    font-size: map.get(variables.$font-size, 'lg');
+}
+
+h4 {
+    font-size: map.get(variables.$font-size, 'md');
+}
+
+h5 {
+    font-size: map.get(variables.$font-size, 'sm');
+}
+
+h6 {
+    font-size: map.get(variables.$font-size, 'xs');
+}
+
+p {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+small {
+    font-size: map.get(variables.$font-size, 'xs');
+}
+
+strong {
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+// LINKS
+a {
+    color: map.get(variables.$theme-colors, 'dark');
+    text-decoration: underline;
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:hover,
+    &:focus {
+        color: map.get(variables.$theme-colors-hovers, 'primary');
+    }
+
+    padding: map.get(variables.$spacing-sizes, 'md');
+
+    display: map.get(variables.$display-type, 'flex');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'primary');
+    color: map.get(variables.$theme-colors, 'dark');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+
+    &:hover,
+    &:focus {
+        background-color: map.get(variables.$theme-colors-hovers, 'primary');
+        border-color: map.get(variables.$theme-colors-hovers, 'secondary');
+        color: map.get(variables.$theme-colors-hovers, 'light');
+    }
+}
+
+// MEDIA
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    background-color: map.get(variables.$theme-colors, 'dark');
+}
+
+figure {
+    margin-block: map.get(variables.$spacing-sizes, 'lg');
+}
+
+figcaption {
+    margin-top: map.get(variables.$spacing-sizes, 'sm');
+    color: map.get(variables.$theme-colors, 'secondary');
+    font-size: map.get(variables.$font-size, 'xs');
+    text-align: center;
+}
+
+// LISTS
+ul,
+ol {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    padding-left: map.get(variables.$spacing-sizes, 'xl');
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    margin-bottom: map.get(variables.$spacing-sizes, 'xs');
+}
+
+dl {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+dt {
+    font-weight: map.get(variables.$font-weight, 'bold');
+    color: map.get(variables.$theme-colors, 'secondary');
+}
+
+dd {
+    margin-left: map.get(variables.$spacing-sizes, 'lg');
+    margin-bottom: map.get(variables.$spacing-sizes, 'sm');
+}
+
+// LINKS
+a {
+    color: map.get(variables.$theme-colors, 'secondary');
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:visited {
+        color: map.get(variables.$theme-colors-hovers, 'info');
+    }
+
+    &:hover {
+        color: map.get(variables.$theme-colors-hovers, 'secondary');
+    }
+
+    &:focus-visible {
+        outline-style: map.get(variables.$border-style, 'solid');
+        outline-width: map.get(variables.$border-width, 'sm');
+        outline-color: map.get(variables.$theme-colors, 'dark');
+        outline-offset: map.get(variables.$spacing-sizes, 'xs');
+    }
+
+    &:active {
+        color: map.get(variables.$theme-colors-hovers, 'danger');
+    }
+}
+
+// FORMS
+form {
+    display: block;
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    background-color: map.get(variables.$theme-colors, 'success');
+}
+
+fieldset {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    padding: map.get(variables.$spacing-sizes, 'lg');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+}
+
+legend {
+    padding-inline: map.get(variables.$spacing-sizes, 'sm');
+
+    color: map.get(variables.$theme-colors, 'secondary');
+
+    font-family: map.get(variables.$fonts, 'heading'), serif;
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+label {
+    display: block;
+    margin-bottom: map.get(variables.$spacing-sizes, 'xs');
+
+    color: map.get(variables.$theme-colors, 'dark');
+    font-weight: map.get(variables.$font-weight, 'semibold');
+}
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin-bottom: map.get(variables.$spacing-sizes, 'md');
+    padding: map.get(variables.$spacing-sizes, 'sm');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline-style: map.get(variables.$border-style, 'solid');
+    outline-width: map.get(variables.$border-width, 'sm');
+    outline-color: map.get(variables.$theme-colors, 'dark');
+    outline-offset: map.get(variables.$spacing-sizes, 'xs');
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+select {
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+option {
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    width: auto;
+    margin-right: map.get(variables.$spacing-sizes, 'xs');
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input[type='range'],
+input[type='color'],
+input[type='file'] {
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input[type='color'] {
+    min-height: 3rem;
+    padding: map.get(variables.$spacing-sizes, 'xs');
+}
+
+input[type='file'] {
+    background-color: transparent;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+    opacity: 0.6;
+    cursor: map.get(variables.$cursor-styles, 'not-allowed');
+}
+
+button {
+    padding:
+        map.get(variables.$spacing-sizes, 'sm')
+        map.get(variables.$spacing-sizes, 'lg');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'secondary');
+    color: map.get(variables.$theme-colors, 'light');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:hover:not(:disabled),
+    &:focus-visible:not(:disabled) {
+        background-color: map.get(variables.$theme-colors-hovers, 'secondary');
+        border-color: map.get(variables.$theme-colors-hovers, 'secondary');
+    }
+}
+
+
+
+// TABLES
+table {
+    width: 100%;
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    border-collapse: collapse;
+}
+
+caption {
+    margin-bottom: map.get(variables.$spacing-sizes, 'sm');
+
+    color: map.get(variables.$theme-colors, 'secondary');
+
+    font-family: map.get(variables.$fonts, 'heading'), serif;
+    font-weight: map.get(variables.$font-weight, 'bold');
+    text-align: left;
+}
+
+thead {
+    background-color: map.get(variables.$theme-colors, 'secondary');
+    color: map.get(variables.$theme-colors, 'light');
+}
+
+tbody {
+    background-color: map.get(variables.$theme-colors, 'light');
+}
+
+tr {
+    border-bottom-style: map.get(variables.$border-style, 'solid');
+    border-bottom-width: map.get(variables.$border-width, 'xs');
+    border-bottom-color: map.get(variables.$theme-colors, 'neutral');
+}
+
+th,
+td {
+    padding: map.get(variables.$spacing-sizes, 'sm');
+    text-align: left;
+}
+
+th {
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+// LAYOUT
+header,
+footer {
+    padding:
+        map.get(variables.$spacing-sizes, 'lg')
+        map.get(variables.$spacing-sizes, 'xl');
+
+    background-color: map.get(variables.$theme-colors, 'secondary');
+    color: map.get(variables.$theme-colors, 'light');
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    padding-block: map.get(variables.$spacing-sizes, 'xxl');
+}
+
+hr {
+    margin-block: map.get(variables.$spacing-sizes, 'xl');
+
+    border: none;
+    border-top-style: map.get(variables.$border-style, 'solid');
+    border-top-width: map.get(variables.$border-width, 'xs');
+    border-top-color: map.get(variables.$theme-colors, 'secondary');
+}

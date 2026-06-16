@@ -36,24 +36,24 @@ $text-alignment: (
 
 @each $name, $font in $fonts{
     .font-#{$name}{
-        font-family: #{$font};
+        font-family: #{$font} !important;
     }
 }
 
 @each $name, $size in $font-size{
     .font-size-#{$name}{
-        font-size: #{$size};
+        font-size: #{$size} !important;
     }
 }
 
 @each $name, $weight in $font-weight{
     .font-weight-#{$name}{
-        font-weight: #{$weight};
+        font-weight: #{$weight} !important;
     }
 };
 
 @each $name, $align in $text-alignment{
     .text-align-#{$name}{
-        text-align: #{$align};
+        text-align: #{$align} !important;
     }
 };

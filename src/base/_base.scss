@@ -62,8 +62,25 @@ small {
     font-size: map.get(variables.$font-size, 'xs');
 }
 
+em {
+    font-style: italic;
+}
+
+mark {
+    background-color: map.get(variables.$theme-colors, 'warning')
+}
+
 strong {
     font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+abbr {
+    text-decoration: underline dotted;
+}
+
+cite {
+    font-style: italic;
+    font-weight: map.get(variables.$font-weight, 'medium');
 }
 
 blockquote {
@@ -120,7 +137,7 @@ figcaption {
     margin-top: map.get(variables.$spacing-sizes, 'sm');
     color: map.get(variables.$theme-colors, 'secondary');
     font-size: map.get(variables.$font-size, 'xs');
-    text-align: map.get(variables.$text-alignment, 'center');
+    text-align: map.get(variables.$text-alignment, 'left');
 }
 
 // LISTS
@@ -159,11 +176,11 @@ dd {
 // FORMS
 form {
     display: map.get(variables.$display-type, 'block');
-    margin-top: map.get(variables.$spacing-sizes, 'xxl');
+    margin-top: map.get(variables.$spacing-sizes, 'lg');
     margin-bottom: map.get(variables.$spacing-sizes, 'lg');
     padding: map.get(variables.$spacing-sizes, 'lg');
     width: map.get(variables.$container-sizes, '90');
-    
+
 
     background-color: map.get(variables.$theme-colors, 'success');
     border-radius: map.get(variables.$border-radius-sizes, 'medium');
@@ -178,11 +195,11 @@ fieldset {
 }
 
 legend {
-    padding-inline: map.get(variables.$spacing-sizes, 'sm');
     color: map.get(variables.$theme-colors, 'secondary');
 
     font-family: map.get(variables.$fonts, 'heading');
     font-weight: map.get(variables.$font-weight, 'bold');
+    font-size: map.get(variables.$font-size, 'md');
 }
 
 label {
@@ -238,23 +255,23 @@ input[type='radio'] {
 
 
 input[type='checkbox']::before {
-   content: '✓';
+    content: '✓';
 
-   color: map.get(variables.$theme-colors, 'light');
-   font-size: map.get(variables.$font-size, 'xs');
-   font-weight: map.get(variables.$font-weight, 'bold');
-   line-height: 1;
+    color: map.get(variables.$theme-colors, 'light');
+    font-size: map.get(variables.$font-size, 'xs');
+    font-weight: map.get(variables.$font-weight, 'bold');
+    line-height: 1;
 }
 
 
 input[type='radio']::before {
-   content: '';
+    content: '';
 
-   width: map.get(variables.$spacing-sizes, 'sm');
-   height: map.get(variables.$spacing-sizes, 'sm');
+    width: map.get(variables.$spacing-sizes, 'sm');
+    height: map.get(variables.$spacing-sizes, 'sm');
 
-   border-radius: map.get(variables.$border-radius-sizes, 'circle');
-   background-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'circle');
+    background-color: map.get(variables.$theme-colors, 'secondary');
 }
 
 input[type='radio']:checked::before {
@@ -334,24 +351,7 @@ button:disabled {
 }
 
 button {
-    padding: map.get(variables.$spacing-sizes, 'lg');
-
-    border-style: map.get(variables.$border-style, 'solid');
-    border-width: map.get(variables.$border-width, 'xs');
-    border-color: map.get(variables.$theme-colors, 'secondary');
-    border-radius: map.get(variables.$border-radius-sizes, 'small');
-
-    background-color: map.get(variables.$theme-colors, 'primary');
-    color: map.get(variables.$theme-colors, 'dark');
-
-    cursor: map.get(variables.$cursor-styles, 'pointer');
-
-    &:hover:not(:disabled),
-    &:focus-visible:not(:disabled) {
-        background-color: map.get(variables.$theme-colors-hovers, 'primary');
-        border-color: map.get(variables.$theme-colors-hovers, 'dark');
-        color: map.get(variables.$theme-colors, 'light');
-    }
+    @include components.button();
 }
 
 // TABLES
@@ -406,6 +406,42 @@ footer {
     color: map.get(variables.$theme-colors, 'light');
 }
 
+nav {
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: map.get(variables.$spacing-sizes, 'none');
+        padding: map.get(variables.$spacing-sizes, 'none');
+
+        li {
+            padding: map.get(variables.$spacing-sizes, 'sm');
+
+            a:link {
+                all:unset;
+                transition: font-weight 250ms;
+            }
+            a:visited {
+                all:unset;
+            }
+            a:hover {
+                font-weight: map.get(variables.$font-weight, 'bold');
+                transition: font-weight 250ms;
+            }
+            a:active {
+                all:unset;
+            }
+
+            a:focus-visible {
+                outline-style: map.get(variables.$border-style, 'solid');
+                outline-width: map.get(variables.$border-width, 'xs');
+                outline-color: map.get(variables.$theme-colors, 'primary');
+                outline-offset: map.get(variables.$spacing-sizes, 'xs');
+            }
+
+        }
+    }
+}
+
 footer {
     margin-top: map.get(variables.$spacing-sizes, 'xxl');
 }
@@ -428,7 +464,7 @@ hr {
     border-top-color: map.get(variables.$theme-colors, 'secondary');
 }
 
-// ACCORDIAN [details + summary]
+// ACCORDION [details + summary]
 details {
     padding: map.get(variables.$spacing-sizes, 'md');
 

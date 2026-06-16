@@ -1,0 +1,59 @@
+@use 'sass:map';
+@use '../variables' as variables;
+
+@mixin breadcrumbs($text-color: map.get(variables.$theme-colors, 'dark')) {
+    ul.breadcrumbs-list {
+        display: flex;
+        list-style-type: none;
+        margin: map.get(variables.$spacing-sizes, 'lg') map.get(variables.$spacing-sizes, 'none');
+        padding: map.get(variables.$spacing-sizes, 'none');
+
+        li.breadcrumbs-item {
+            margin: map.get(variables.$spacing-sizes, 'none') map.get(variables.$spacing-sizes, 'sm');
+            color: $text-color;
+            a:link {
+                all:unset;
+                transition: font-weight 250ms;
+            }
+            a:visited {
+                all:unset;
+            }
+            a:hover {
+                // font-weight: map.get(variables.$font-weight, 'bold');
+                text-decoration: underline;
+                transition: font-weight 250ms;
+            }
+            a:active {
+                all:unset;
+            }
+
+            a:focus-visible {
+                outline-style: map.get(variables.$border-style, 'solid');
+                outline-width: map.get(variables.$border-width, 'xs');
+                outline-color: map.get(variables.$theme-colors, 'primary');
+                outline-offset: map.get(variables.$spacing-sizes, 'xs');
+            }
+        }
+
+        li.breadcrumbs-item:not(:last-child)::after {
+            content: '/';
+            padding-left: map.get(variables.$spacing-sizes, 'md');
+            font-weight: map.get(variables.$font-weight, 'bold');
+        }
+
+
+        .current-item {
+            font-weight: map.get(variables.$font-weight, 'black');
+        }
+    }
+}
+
+div.breadcrumbs {
+    @include breadcrumbs();
+}
+
+@each $name, $color in variables.$theme-colors {
+    .breadcrumbs-#{$name} {
+        @include breadcrumbs($color);
+    }
+}

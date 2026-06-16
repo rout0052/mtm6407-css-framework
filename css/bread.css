@@ -1,4 +1,8 @@
-@charset "UTF-8";
+/*
+* Bread.CSS
+* Contributors: Taro Routly, Taylor Baker, Lauren Brunet, Paul Decker
+* Created for MTM6407 - Web Development IV
+*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
@@ -100,12 +104,20 @@ meter {
   color: #b7c4d1 !important;
 }
 
+.border-color-primary {
+  border-color: #b7c4d1 !important;
+}
+
 .bg-secondary {
   background-color: #574435 !important;
 }
 
 .text-secondary {
   color: #574435 !important;
+}
+
+.border-color-secondary {
+  border-color: #574435 !important;
 }
 
 .bg-neutral {
@@ -116,12 +128,20 @@ meter {
   color: #e6e0d6 !important;
 }
 
+.border-color-neutral {
+  border-color: #e6e0d6 !important;
+}
+
 .bg-success {
   background-color: #bdc4bb !important;
 }
 
 .text-success {
   color: #bdc4bb !important;
+}
+
+.border-color-success {
+  border-color: #bdc4bb !important;
 }
 
 .bg-danger {
@@ -132,12 +152,20 @@ meter {
   color: #fdbfb2 !important;
 }
 
+.border-color-danger {
+  border-color: #fdbfb2 !important;
+}
+
 .bg-warning {
   background-color: #e4de94 !important;
 }
 
 .text-warning {
   color: #e4de94 !important;
+}
+
+.border-color-warning {
+  border-color: #e4de94 !important;
 }
 
 .bg-info {
@@ -148,6 +176,10 @@ meter {
   color: #cfb6db !important;
 }
 
+.border-color-info {
+  border-color: #cfb6db !important;
+}
+
 .bg-light {
   background-color: #eeeeee !important;
 }
@@ -156,12 +188,20 @@ meter {
   color: #eeeeee !important;
 }
 
+.border-color-light {
+  border-color: #eeeeee !important;
+}
+
 .bg-dark {
   background-color: #333333 !important;
 }
 
 .text-dark {
   color: #333333 !important;
+}
+
+.border-color-dark {
+  border-color: #333333 !important;
 }
 
 .bg-hover-primary:hover {
@@ -198,42 +238,6 @@ meter {
 
 .bg-hover-dark:hover {
   background-color: #242424 !important;
-}
-
-.border-color-primary {
-  border-color: #b7c4d1 !important;
-}
-
-.border-color-secondary {
-  border-color: #574435 !important;
-}
-
-.border-color-neutral {
-  border-color: #e6e0d6 !important;
-}
-
-.border-color-success {
-  border-color: #bdc4bb !important;
-}
-
-.border-color-danger {
-  border-color: #fdbfb2 !important;
-}
-
-.border-color-warning {
-  border-color: #e4de94 !important;
-}
-
-.border-color-info {
-  border-color: #cfb6db !important;
-}
-
-.border-color-light {
-  border-color: #eeeeee !important;
-}
-
-.border-color-dark {
-  border-color: #333333 !important;
 }
 
 .font-body {
@@ -2131,6 +2135,10 @@ abbr {
 cite {
   font-style: italic;
   font-weight: 500;
+}
+
+code {
+  font-family: "Courier New", monospace;
 }
 
 blockquote {

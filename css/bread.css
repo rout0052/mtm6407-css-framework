@@ -1,8 +1,4 @@
-/*
-* Bread.CSS
-* Contributors: Taro Routly, Taylor Baker, Lauren Brunet, Paul Decker
-* Created for MTM6407 - Web Development IV
-*/
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
@@ -1174,6 +1170,7 @@ div.breadcrumbs ul.breadcrumbs-list {
 div.breadcrumbs ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #333333;
+  cursor: pointer;
 }
 div.breadcrumbs ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1213,6 +1210,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-primary ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #b7c4d1;
+  cursor: pointer;
 }
 .breadcrumbs-primary ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1252,6 +1250,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-secondary ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #574435;
+  cursor: pointer;
 }
 .breadcrumbs-secondary ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1291,6 +1290,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-neutral ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #e6e0d6;
+  cursor: pointer;
 }
 .breadcrumbs-neutral ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1330,6 +1330,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-success ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #bdc4bb;
+  cursor: pointer;
 }
 .breadcrumbs-success ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1369,6 +1370,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-danger ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #fdbfb2;
+  cursor: pointer;
 }
 .breadcrumbs-danger ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1408,6 +1410,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-warning ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #e4de94;
+  cursor: pointer;
 }
 .breadcrumbs-warning ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1447,6 +1450,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-info ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #cfb6db;
+  cursor: pointer;
 }
 .breadcrumbs-info ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1486,6 +1490,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-light ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #eeeeee;
+  cursor: pointer;
 }
 .breadcrumbs-light ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;
@@ -1525,6 +1530,7 @@ div.breadcrumbs ul.breadcrumbs-list .current-item {
 .breadcrumbs-dark ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #333333;
+  cursor: pointer;
 }
 .breadcrumbs-dark ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;

@@ -1176,6 +1176,7 @@ div.breadcrumbs ul.breadcrumbs-list {
 div.breadcrumbs ul.breadcrumbs-list li.breadcrumbs-item {
   margin: 0rem 0.5rem;
   color: #333333;
+  cursor: pointer;
 }
 div.breadcrumbs ul.breadcrumbs-list li.breadcrumbs-item a:link {
   all: unset;

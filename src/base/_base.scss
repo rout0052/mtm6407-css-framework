@@ -83,6 +83,10 @@ cite {
     font-weight: map.get(variables.$font-weight, 'medium');
 }
 
+code {
+    font-family: 'Courier New', monospace;
+}
+
 blockquote {
     margin-bottom: map.get(variables.$spacing-sizes, 'lg');
 }

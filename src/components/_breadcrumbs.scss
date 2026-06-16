@@ -41,7 +41,7 @@
             font-weight: map.get(variables.$font-weight, 'bold');
         }
 
-
+        // Added as a class instead of using last-child to account for edge cases where the breadcrumbs might not have the active page be the last one
         .current-item {
             font-weight: map.get(variables.$font-weight, 'black');
         }

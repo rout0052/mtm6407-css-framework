@@ -11,6 +11,8 @@
         li.breadcrumbs-item {
             margin: map.get(variables.$spacing-sizes, 'none') map.get(variables.$spacing-sizes, 'sm');
             color: $text-color;
+            cursor: map.get(variables.$cursor-styles, 'pointer');
+            
             a:link {
                 all:unset;
                 transition: font-weight 250ms;

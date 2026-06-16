@@ -1,2 +1,66 @@
 @use 'sass:map';
 @use '../variables' as variables;
+
+@mixin button($btn-bg-color: map.get(variables.$theme-colors, 'primary'), $text-color: map.get(variables.$theme-colors, 'dark'), $bg-hover: map.get(variables.$theme-colors-hovers, 'primary'), $text-hover: map.get(variables.$theme-colors, 'light')) {
+    padding: map.get(variables.$spacing-sizes, 'lg');
+    border: map.get(variables.$border-width, 'xs') map.get(variables.$border-style, 'solid') $text-color;
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+    background-color: $btn-bg-color;
+    color: $text-color;
+    margin: map.get(variables.$spacing-sizes, 'sm');
+    transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:visited {
+        color:$text-color;
+    }
+
+    &:hover:not(:disabled),
+    &:focus-visible:not(:disabled) {
+        background-color: $bg-hover;
+        border-color: $text-hover;
+        color: $text-hover !important;
+        transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+    }
+
+}
+
+// Base styles for the button class
+.btn {
+    @include button();
+}
+
+// Uses the theme colors loop to make a button for each color. Research was done to create accessible contrast buttons through @if and @else statements. I learned this on the SASS website: https://sass-lang.com/documentation/at-rules/control/if/
+
+// The contrast calculations to see what worked on each color background was done using Andrew Hick's contrast tool: https://www.andrewhick.com/colour/contrast/#contrast
+
+@each $name, $color in variables.$theme-colors {
+    // The Secondary shade has a light text colour on its normal state
+    @if $name =='secondary'{
+        .btn-#{$name} {
+            @include button($color, map.get(variables.$theme-colors, 'light'), map.get(variables.$theme-colors-hovers, $name), map.get(variables.$theme-colors, 'dark'));
+        };
+    }
+
+    // The Dark shade has a light text colour on its normal and hover state
+    @else if $name =='dark' {
+        .btn-#{$name} {
+            @include button($color, map.get(variables.$theme-colors, 'light'), map.get(variables.$theme-colors-hovers, $name), map.get(variables.$theme-colors, 'light'));
+        };
+    }
+
+    // The Primary and Success shade has a light text colour on its hover state
+    @else if $name =='primary' or $name =='success'  {
+        .btn-#{$name} {
+            @include button($color, map.get(variables.$theme-colors, 'dark'), map.get(variables.$theme-colors-hovers, $name), map.get(variables.$theme-colors, 'light'));
+        };
+    }
+
+    @else {
+        .btn-#{$name} {
+            @include button($color, map.get(variables.$theme-colors, 'dark'), map.get(variables.$theme-colors-hovers, $name), map.get(variables.$theme-colors, 'dark'));
+        };
+    }
+
+}

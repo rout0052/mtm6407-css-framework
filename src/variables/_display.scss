@@ -38,26 +38,26 @@ $cursor-styles: (
 
 @each $name, $display in $display-type{
     .display-#{$name}{
-        display: #{$display};
+        display: #{$display} !important;
     }
 }
 
 @each $name, $align in $content-alignment{
     .align-#{$name}{
-        align-content: #{$align};
+        align-content: #{$align} !important;
     }
 
     .justify-#{$name}{
-        justify-content: #{$align};
+        justify-content: #{$align} !important;
     }
 }
 
 @each $name, $cursor in $cursor-styles{
     .cursor-#{$name}{
-        cursor: #{$cursor};
+        cursor: #{$cursor} !important;
     }
 }
 
 .flex-wrap{
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
 }

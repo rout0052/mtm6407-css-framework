@@ -21,12 +21,12 @@ $border-width: (
 
 @each $name, $style in $border-style{
     .border-style-#{$name}{
-        border-style: #{$style};
+        border-style: #{$style} !important;
     }
 }
 
 @each $name, $size in $border-width{
     .border-width-#{$name}{
-        border-width: #{$size};
+        border-width: #{$size} !important;
     }
 }

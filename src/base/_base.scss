@@ -3,3 +3,482 @@
 @use '../variables/' as variables;
 @use '../components/' as components;
 
+
+// GLOBAL
+body {
+    margin: map.get(variables.$spacing-sizes, 'none');
+    padding: map.get(variables.$spacing-sizes, 'none');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+
+    font-family: map.get(variables.$fonts, 'body');
+    font-size: map.get(variables.$font-size, 'sm');
+    font-weight: map.get(variables.$font-weight, 'regular');
+}
+
+// TYPOGRAPHY
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: map.get(variables.$spacing-sizes, 'md');
+    color: map.get(variables.$theme-colors, 'secondary');
+    font-family: map.get(variables.$fonts, 'heading');
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+h1 {
+    font-size: map.get(variables.$font-size, '2xl');
+}
+
+h2 {
+    font-size: map.get(variables.$font-size, 'xl');
+}
+
+h3 {
+    font-size: map.get(variables.$font-size, 'lg');
+}
+
+h4 {
+    font-size: map.get(variables.$font-size, 'md');
+}
+
+h5 {
+    font-size: map.get(variables.$font-size, 'sm');
+}
+
+h6 {
+    font-size: map.get(variables.$font-size, 'xs');
+}
+
+p {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+small {
+    font-size: map.get(variables.$font-size, 'xs');
+}
+
+strong {
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+blockquote {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+// LINKS
+a {
+    color: map.get(variables.$theme-colors, 'dark');
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:visited,
+    &.visited {
+        color: map.get(variables.$theme-colors-hovers, 'info');
+    }
+
+    &:hover,
+    &.hover {
+        color: map.get(variables.$theme-colors-hovers, 'primary');
+        font-weight: map.get(variables.$font-weight, 'bold');
+
+    }
+
+    &:active,
+    &.active {
+        color: map.get(variables.$theme-colors-hovers, 'danger');
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline-style: map.get(variables.$border-style, 'solid');
+        outline-width: map.get(variables.$border-width, 'sm');
+        outline-color: map.get(variables.$theme-colors, 'dark');
+        outline-offset: map.get(variables.$spacing-sizes, 'xs');
+    }
+}
+
+// MEDIA
+img,
+video {
+    display: map.get(variables.$display-type, 'block');
+    max-width: map.get(variables.$container-sizes, '100');
+}
+
+video {
+    background-color: map.get(variables.$theme-colors, 'dark');
+}
+
+figure {
+    margin-block: map.get(variables.$spacing-sizes, 'lg');
+}
+
+figcaption {
+    margin-top: map.get(variables.$spacing-sizes, 'sm');
+    color: map.get(variables.$theme-colors, 'secondary');
+    font-size: map.get(variables.$font-size, 'xs');
+    text-align: map.get(variables.$text-alignment, 'center');
+}
+
+// LISTS
+ul,
+ol {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    padding-left: map.get(variables.$spacing-sizes, 'xl');
+}
+
+li {
+    margin-bottom: map.get(variables.$spacing-sizes, 'xs');
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dl {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+dt {
+    color: map.get(variables.$theme-colors, 'secondary');
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+dd {
+    margin-left: map.get(variables.$spacing-sizes, 'lg');
+    margin-bottom: map.get(variables.$spacing-sizes, 'sm');
+}
+
+// FORMS
+form {
+    display: map.get(variables.$display-type, 'block');
+    margin-top: map.get(variables.$spacing-sizes, 'xxl');
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    padding: map.get(variables.$spacing-sizes, 'lg');
+    width: map.get(variables.$container-sizes, '90');
+    
+
+    background-color: map.get(variables.$theme-colors, 'success');
+    border-radius: map.get(variables.$border-radius-sizes, 'medium');
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+fieldset {
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    padding: map.get(variables.$spacing-sizes, 'lg');
+}
+
+legend {
+    padding-inline: map.get(variables.$spacing-sizes, 'sm');
+    color: map.get(variables.$theme-colors, 'secondary');
+
+    font-family: map.get(variables.$fonts, 'heading');
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+label {
+    display: map.get(variables.$display-type, 'block');
+    margin-bottom: map.get(variables.$spacing-sizes, 'xs');
+
+    color: map.get(variables.$theme-colors, 'dark');
+    font-weight: map.get(variables.$font-weight, 'semibold');
+}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select {
+    width: map.get(variables.$container-sizes, '100');
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+    margin-top: map.get(variables.$spacing-sizes, 'md');
+    padding: map.get(variables.$spacing-sizes, 'sm');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    display: map.get(variables.$display-type, 'inline-grid');
+    place-content: map.get(variables.$content-alignment, 'center');
+
+    width: map.get(variables.$spacing-sizes, 'lg');
+    height: map.get(variables.$spacing-sizes, 'lg');
+    margin: map.get(variables.$spacing-sizes, 'none');
+    padding: map.get(variables.$spacing-sizes, 'none');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input[type='checkbox']:checked {
+    background-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+input[type='radio'] {
+    border-radius: map.get(variables.$border-radius-sizes, 'circle');
+}
+
+
+input[type='checkbox']::before {
+   content: '✓';
+
+   color: map.get(variables.$theme-colors, 'light');
+   font-size: map.get(variables.$font-size, 'xs');
+   font-weight: map.get(variables.$font-weight, 'bold');
+   line-height: 1;
+}
+
+
+input[type='radio']::before {
+   content: '';
+
+   width: map.get(variables.$spacing-sizes, 'sm');
+   height: map.get(variables.$spacing-sizes, 'sm');
+
+   border-radius: map.get(variables.$border-radius-sizes, 'circle');
+   background-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+input[type='radio']:checked::before {
+    display: block;
+}
+
+label:has(input[type='checkbox']),
+label:has(input[type='radio']) {
+    display: map.get(variables.$display-type, 'flex');
+    align-items: map.get(variables.$content-alignment, 'center');
+    gap: map.get(variables.$spacing-sizes, 'xs');
+    margin-bottom: map.get(variables.$spacing-sizes, 'sm');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline-style: map.get(variables.$border-style, 'solid');
+    outline-width: map.get(variables.$border-width, 'sm');
+    outline-color: map.get(variables.$theme-colors, 'dark');
+    outline-offset: map.get(variables.$spacing-sizes, 'xs');
+}
+
+select,
+input[type='range'],
+input[type='color'],
+input[type='file'] {
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+option {
+    background-color: map.get(variables.$theme-colors, 'light');
+    color: map.get(variables.$theme-colors, 'dark');
+}
+
+
+input[type='color'] {
+    width: map.get(variables.$container-sizes, '100');
+    min-height: map.get(variables.$spacing-sizes, 'xxl');
+    padding: map.get(variables.$spacing-sizes, 'xs');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'light');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input[type='color']:focus-visible {
+    outline-style: map.get(variables.$border-style, 'solid');
+    outline-width: map.get(variables.$border-width, 'sm');
+    outline-color: map.get(variables.$theme-colors, 'dark');
+    outline-offset: map.get(variables.$spacing-sizes, 'xs');
+}
+
+input[type='range'] {
+    accent-color: map.get(variables.$theme-colors, 'secondary');
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+input[type='range']::-webkit-slider-thumb {
+    background-color: map.get(variables.$theme-colors, 'secondary');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+    cursor: map.get(variables.$cursor-styles, 'not-allowed');
+}
+
+button {
+    padding: map.get(variables.$spacing-sizes, 'lg');
+
+    border-style: map.get(variables.$border-style, 'solid');
+    border-width: map.get(variables.$border-width, 'xs');
+    border-color: map.get(variables.$theme-colors, 'secondary');
+    border-radius: map.get(variables.$border-radius-sizes, 'small');
+
+    background-color: map.get(variables.$theme-colors, 'primary');
+    color: map.get(variables.$theme-colors, 'dark');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+
+    &:hover:not(:disabled),
+    &:focus-visible:not(:disabled) {
+        background-color: map.get(variables.$theme-colors-hovers, 'primary');
+        border-color: map.get(variables.$theme-colors-hovers, 'dark');
+        color: map.get(variables.$theme-colors, 'light');
+    }
+}
+
+// TABLES
+table {
+    width: map.get(variables.$container-sizes, '100');
+    margin-bottom: map.get(variables.$spacing-sizes, 'lg');
+}
+
+caption {
+    margin-bottom: map.get(variables.$spacing-sizes, 'sm');
+
+    color: map.get(variables.$theme-colors, 'secondary');
+
+    font-family: map.get(variables.$fonts, 'heading');
+    font-weight: map.get(variables.$font-weight, 'bold');
+    text-align: map.get(variables.$text-alignment, 'left');
+}
+
+thead {
+    background-color: map.get(variables.$theme-colors, 'primary');
+    color: map.get(variables.$theme-colors, 'dark');
+    border-radius: map.get(variables.$border-radius-sizes, 'medium');
+}
+
+tbody {
+    background-color: map.get(variables.$theme-colors, 'light');
+    border-radius: map.get(variables.$border-radius-sizes, 'large');
+}
+
+tr {
+    border-bottom-style: map.get(variables.$border-style, 'solid');
+    border-bottom-width: map.get(variables.$border-width, 'xs');
+    border-bottom-color: map.get(variables.$theme-colors, 'primary');
+}
+
+th,
+td {
+    padding: map.get(variables.$spacing-sizes, 'sm');
+    text-align: map.get(variables.$text-alignment, 'left');
+}
+
+th {
+    font-weight: map.get(variables.$font-weight, 'bold');
+}
+
+// LAYOUT
+header,
+footer {
+    padding: map.get(variables.$spacing-sizes, 'xxl');
+
+    background-color: map.get(variables.$theme-colors, 'secondary');
+    color: map.get(variables.$theme-colors, 'light');
+}
+
+footer {
+    margin-top: map.get(variables.$spacing-sizes, 'xxl');
+}
+
+main {
+    width: map.get(variables.$container-sizes, '100');
+}
+
+section {
+    padding-top: map.get(variables.$spacing-sizes, 'xxl');
+    margin: map.get(variables.$spacing-sizes, 'xl');
+}
+
+hr {
+    margin-block: map.get(variables.$spacing-sizes, 'xl');
+
+    border-style: map.get(variables.$border-style, 'none');
+    border-top-style: map.get(variables.$border-style, 'solid');
+    border-top-width: map.get(variables.$border-width, 'xs');
+    border-top-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+// ACCORDIAN [details + summary]
+details {
+    padding: map.get(variables.$spacing-sizes, 'md');
+
+    border-top-style: map.get(variables.$border-style, 'solid');
+    border-top-width: map.get(variables.$border-width, 'xs');
+    border-top-color: map.get(variables.$theme-colors, 'secondary');
+
+    border-bottom-style: map.get(variables.$border-style, 'solid');
+    border-bottom-width: map.get(variables.$border-width, 'xs');
+    border-bottom-color: map.get(variables.$theme-colors, 'secondary');
+}
+
+details:first-of-type {
+    border-top-width: map.get(variables.$border-width, 'none');
+}
+
+details:last-of-type {
+    border-bottom-width: map.get(variables.$border-width, 'none');
+}
+
+details[open] p {
+    margin-top: map.get(variables.$spacing-sizes, 'none');
+    margin-bottom: map.get(variables.$spacing-sizes, 'none');
+
+    padding: map.get(variables.$spacing-sizes, 'md');
+}
+
+details[open] summary {
+    background-color: map.get(variables.$theme-colors, 'primary');
+    text-transform: uppercase;
+}
+
+summary {
+    display: map.get(variables.$display-type, 'flex');
+    justify-content: map.get(variables.$content-alignment, 'space-between');
+
+    padding: map.get(variables.$spacing-sizes, 'sm');
+
+    color: map.get(variables.$theme-colors, 'secondary');
+    font-weight: map.get(variables.$font-weight, 'bold');
+
+    cursor: map.get(variables.$cursor-styles, 'pointer');
+}
+
+summary::after {
+    content: '+';
+    font-size: map.get(variables.$font-size, 'md');
+}
+
+details[open] summary::after {
+    content: '-';
+    font-size: map.get(variables.$font-size, 'md');
+}

@@ -8,205 +8,468 @@
     <link rel="stylesheet" href="./css/bread.css">
 </head>
 
-<body>
-    <header>
-        <h1>Bread.CSS</h1>
+<body class="bg-neutral">
+    <header class="display-flex justify-space-between">
+        <h1 class="text-light font-size-lg">Bread.CSS <i class="fa-solid fa-bread-slice"></i></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#components">Components Showcase</a></li>
+                <li><a href="#semantic">Semantic Showcase</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="semantic-showcase">
+    <main class="width-80 m-auto bg-light">
+        <section id="about">
+            <h2>What is Bread.CSS?</h2>
+            <p>Bread.CSS is a follow up CSS framework to our in-class lab creating Butter.CSS to learn about SaSS
+                partials and framework organization.</p>
+            <p>It was made by Taro Routly, Taylor Baker, Lauren Brunet, and Paul Decker for MTM6407 at Algonquin College
+                in the Interactive Media Design program.</p>
+        </section>
 
-        <h1><i class="fa-solid fa-bread-slice"></i> Heading 1</h1>
-        <h2><i class="fa-solid fa-star"></i> Heading 2</h2>
-        <h3><i class="fa-solid fa-circle-info"></i> Heading 3</h3>
-        <h4><i class="fa-solid fa-check"></i> Heading 4</h4>
-        <h5><i class="fa-solid fa-tag"></i> Heading 5</h5>
-        <h6><i class="fa-solid fa-leaf"></i> Heading 6</h6>
+        <section id="installation">
+            <h2>Installation</h2>
+            <a href="/dist/bread.min.css" class="btn-primary ml-none" download>Download minified CSS here <i
+                    class="fa-solid fa-download"></i></a>
+            <a href="/dist/" class="btn-secondary ml-none" download>Download source code here <i
+                    class="fa-solid fa-download"></i></a>
+        </section>
 
-        <p>
-            <i class="fa-solid fa-pen-nib"></i>
-            This is a paragraph of a body text. Here is <em>emphasis</em>,
-            <strong>Stong text</strong>, a <mark>highlighted phrase</mark>,
-            an <abbr title="HyperText Markup Language">HTML</abbr> abbreviation,
-            and a <cite>citation reference</cite>.
-        </p>
+        <section id="components">
+            <h2>Components Showcase</h2>
+            <p>This section will show examples of the different components in our framework.</p>
 
-        <blockquote>
-            <i class="fa-solid fa-quote-left"></i>
-            “This is a blockquote showcasing demonstrating semantic text.”
-            <cite>— Someone Important</cite>
-        </blockquote>
+            <h3>Buttons</h3>
+            <div class="mb-xl">
+                <button class="btn-primary">Primary</button>
+                <button class="btn-secondary">Secondary</button>
+                <button class="btn-neutral">Neutral</button>
+                <button class="btn-success">Success</button>
+                <button class="btn-warning">Warning</button>
+                <button class="btn-danger">Danger</button>
+                <button class="btn-info">Info</button>
+                <button class="btn-dark">Dark</button>
+                <button class="btn-light">Light</button>
+            </div>
 
-        <q><i class="fa-solid fa-comment"></i> This is an inline quote.</q>
+            <h3>Card</h3>
+            <div class="display-flex gap-md flex-wrap">
+                <div class="card width-third">
+                    <img src="https://placehold.co/600x400" alt="Placeholder">
+                    <div class="card-body">
+                        <h3 class="card-title">Title of the Card</h3>
+                        <p class="card-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus
+                            exercitationem
+                            maxime a nam impedit ea sit eum animi illum accusantium ratione consequuntur quisquam fuga,
+                            molestias nesciunt ipsam odit corrupti.
+                            <button>Click Here</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/500x500" alt="Placeholder">
+                    <div class="card-body">
+                        <h3 class="card-title">Title of the Card</h3>
+                        <p class="card-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis temporibus
+                            exercitationem
+                            maxime a nam impedit ea sit eum animi illum accusantium ratione consequuntur quisquam fuga,
+                            molestias nesciunt ipsam odit corrupti.
+                            <button class="btn-info">Click Here</button>
+                        </p>
+                    </div>
+                </div>
 
-        <hr>
 
-        <h3><i class="fa-solid fa-link"></i> Links</h3>
-        <p>
-            <a href="#">Default link</a><br>
-            <a href="#" class="hover">Hover link</a><br>
-            <a href="#" class="active">Active link</a><br>
-            <a href="#" class="visited">Visited link</a>
-        </p>
+            </div>
 
-        <hr>
+            <h3>Infobox</h3>
+            <div class="display-flex flex-wrap gap-sm">
+                <div class="infobox-primary width-30">
+                    <div class="infobox-header">
+                        <h6>Primary Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-secondary width-30">
+                    <div class="infobox-header">
+                        <h6>Secondary Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-neutral width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-success width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-warning width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-danger width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-info width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-light width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+                <div class="infobox-dark width-30">
+                    <div class="infobox-header">
+                        <h6>Name of Infobox</h6>
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="infobox-body">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non repellat ad repellendus unde laudantium neque ullam asperiores fugit ea, odit, voluptas autem inventore iste, aspernatur voluptatem? Ducimus nobis ad consequuntur.</p>
+                    </div>
+                </div>
+            </div>
+            <h3 class="mt-lg">Breadcrumbs</h3>
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-primary bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-secondary">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-neutral bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-success bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-warning bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-danger bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-info bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumbs-light bg-dark">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item"><a href="#">1st Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">2nd Path</a></li>
+                    <li class="breadcrumbs-item"><a href="#">3rd Path</a></li>
+                    <li class="breadcrumbs-item current-item"><a href="index.html">Current Page</a></li>
+                </ul>
+            </div>
 
-        <h3><i class="fa-solid fa-list"></i> Lists</h3>
-        <ul>
-            <li>Unordered list item</li>
-            <li>Another item</li>
-        </ul>
+        </section>
 
-        <ol>
-            <li>Ordered list item</li>
-            <li>Another item</li>
-        </ol>
+        <section id="semantic">
+            <h2>Semantic Showcase</h2>
+            <p>This section showcases the various semantic tag base styles used in this framework.</p>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6><i class="fa-solid fa-leaf"></i> Heading 6</h6>
 
-        <dl>
-            <dt><i class="fa-solid fa-book"></i> Term</dt>
-            <dd>Description of the term.</dd>
-        </dl>
+            <p>
+                <i class="fa-solid fa-pen-nib"></i>
+                This is a paragraph of a body text. Here is <em>emphasis</em>,
+                <strong>strong text</strong>, a <mark>highlighted phrase</mark>,
+                an <abbr title="HyperText Markup Language">HTML</abbr> abbreviation,
+                and a <cite>citation reference</cite>.
+            </p>
 
-        <hr>
+            <blockquote>
+                <i class="fa-solid fa-quote-left"></i>
+                “This is a blockquote showcasing demonstrating semantic text.”
+                <cite>— Someone Important</cite>
+            </blockquote>
 
-        <h3><i class="fa-solid fa-hand-pointer"></i> Buttons</h3>
-        <button class="btn">
-            <i class="fa-solid fa-circle-play"></i> Default Button
-        </button>
-        <button class="btn btn-primary">
-            <i class="fa-solid fa-bolt"></i> Primary Button
-        </button>
+            <q><i class="fa-solid fa-comment"></i> This is an inline quote.</q>
 
-        <hr>
+            <hr>
 
-        <h3><i class="fa-solid fa-image"></i> Image & Video</h3>
-        <figure>
-            <img src="https://via.placeholder.com/400x200" alt="Placeholder image">
-            <figcaption><i class="fa-solid fa-camera"></i> Example image with figcaption</figcaption>
-        </figure>
+            <h3><i class="fa-solid fa-link"></i> Links</h3>
+            <p>
+                <a href="#">Default link</a><br>
+                <a href="#" class="hover">Hover link</a><br>
+                <a href="#" class="active">Active link</a><br>
+                <a href="#" class="visited">Visited link</a>
+            </p>
 
-        <video controls width="400">
-            <source src="https://placeholdervideo.dev/400x300" type="video/mp4">
-            Your browser does not support this video tag.
-        </video>
+            <hr>
 
-        <hr>
+            <h3><i class="fa-solid fa-list"></i> Lists</h3>
+            <ul>
+                <li>Unordered list item</li>
+                <li>Another item</li>
+            </ul>
 
-        <h3><i class="fa-solid fa-pen-to-square"></i> Forms</h3>
-        <form>
-            <fieldset>
-                <legend><i class="fa-solid fa-clipboard"></i> Form Example</legend>
+            <ol>
+                <li>Ordered list item</li>
+                <li>Another item</li>
+            </ol>
 
-                <label>Text Input
-                    <input type="text" placeholder="Enter text">
-                </label>
+            <dl>
+                <dt><i class="fa-solid fa-book"></i> Term</dt>
+                <dd>Description of the term.</dd>
+            </dl>
 
-                <label>Email
-                    <input type="email" placeholder="email@example.com">
-                </label>
+            <hr>
 
-                <label>Password
-                    <input type="password">
-                </label>
+            <h3><i class="fa-solid fa-hand-pointer"></i> Buttons</h3>
+            <button class="btn">
+                <i class="fa-solid fa-circle-play"></i> Default Button
+            </button>
+            <button class="btn btn-primary">
+                <i class="fa-solid fa-bolt"></i> Primary Button
+            </button>
 
-                <label>Number
-                    <input type="number" min="0" max="10">
-                </label>
+            <hr>
 
-                <label>URL
-                    <input type="url" placeholder="https://example.com">
-                </label>
+            <h3><i class="fa-solid fa-image"></i> Image & Video</h3>
+            <div class="display-flex flex-wrap gap-lg">
+                <div>
+                    <h5>Normal Image</h5>
+                    <img src="https://placehold.co/400x200" alt="Placeholder image" class="mb-xl">
+                </div>
+                <div>
+                    <h5>Figure Image</h5>
+                    <figure class="mb-xl">
+                        <img src="https://placehold.co/400x200" alt="Placeholder image">
+                        <figcaption><i class="fa-solid fa-camera"></i> Example image with figcaption</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <h5>Video</h5>
+                    <video controls width="400">
+                        <source src="https://placeholdervideo.dev/400x300" type="video/mp4">
+                        Your browser does not support this video tag.
+                    </video>
+                </div>
+            </div>
+            <hr>
 
-                <label>Telephone
-                    <input type="tel" placeholder="555-555-5555">
-                </label>
+            <h3><i class="fa-solid fa-pen-to-square"></i> Forms</h3>
+            <form>
+                <fieldset>
+                    <legend>Form Example <i class="fa-solid fa-clipboard"></i></legend>
 
-                <label>Time
-                    <input type="time">
-                </label>
+                    <label>Text Input
+                        <input type="text" placeholder="Enter text">
+                    </label>
 
-                <label>Date
-                    <input type="date">
-                </label>
+                    <label>Email
+                        <input type="email" placeholder="email@example.com">
+                    </label>
 
-                <label>Range
-                    <input type="range" min="0" max="100">
-                </label>
+                    <label>Password
+                        <input type="password">
+                    </label>
 
-                <label>Color
-                    <input type="color">
-                </label>
+                    <label>Number
+                        <input type="number" min="0" max="10">
+                    </label>
 
-                <label>File Upload
-                    <input type="file">
-                </label>
+                    <label>URL
+                        <input type="url" placeholder="https://example.com">
+                    </label>
 
-                <label>Textarea
-                    <textarea rows="3"></textarea>
-                </label>
+                    <label>Telephone
+                        <input type="tel" placeholder="555-555-5555">
+                    </label>
 
-                <label>
-                    <input type="checkbox" name="check-ex" value="option"> Checkbox option
-                </label>
+                    <label>Time
+                        <input type="time">
+                    </label>
 
-                <label>
-                    <input type="radio" name="example" value="option"> Radio option
-                </label>
+                    <label>Date
+                        <input type="date">
+                    </label>
 
-                <label>Select Menu
-                    <select>
-                        <option>Option One</option>
-                        <option>Option Two</option>
-                    </select>
-                </label>
-            </fieldset>
-        </form>
+                    <label>Range
+                        <input type="range" min="0" max="100">
+                    </label>
 
-        <hr>
+                    <label>Color
+                        <input type="color">
+                    </label>
 
-        <h3><i class="fa-solid fa-table"></i> Tables</h3>
-        <table>
-            <caption><i class="fa-solid fa-database"></i> Sample Table</caption>
-            <thead>
-                <tr>
-                    <th>Heading 1</th>
-                    <th>Heading 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Row 1, Col 1</td>
-                    <td>Row 1, Col 2</td>
-                </tr>
-                <tr>
-                    <td>Row 2, Col 1</td>
-                    <td>Row 2, Col 2</td>
-                </tr>
-            </tbody>
-        </table>
+                    <label>File Upload
+                        <input type="file">
+                    </label>
 
-        <hr>
+                    <label>Textarea
+                        <textarea rows="3"></textarea>
+                    </label>
 
-        <div>
-            <details>
-                <summary>Details</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </details>
+                    <label>
+                        <input type="checkbox" name="check-ex" value="option"> Checkbox option
+                    </label>
 
-            <details>
-                <summary>Details</summary>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </details>
+                    <label>
+                        <input type="radio" name="example" value="option"> Radio option
+                    </label>
 
-            <details>
-                <summary>Details</summary>
-                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-            </details>
-        </div>
+                    <label>Select Menu
+                        <select>
+                            <option>Option One</option>
+                            <option>Option Two</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
 
-    </section>
+            <hr>
+
+            <h3><i class="fa-solid fa-table"></i> Tables</h3>
+            <table>
+                <caption><i class="fa-solid fa-database"></i> Sample Table</caption>
+                <thead>
+                    <tr>
+                        <th>Heading 1</th>
+                        <th>Heading 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1, Col 1</td>
+                        <td>Row 1, Col 2</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Col 1</td>
+                        <td>Row 2, Col 2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <div>
+                <details>
+                    <summary>Details</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.</p>
+                </details>
+
+                <details>
+                    <summary>Details</summary>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        dicta sunt explicabo.</p>
+                </details>
+
+                <details>
+                    <summary>Details</summary>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                        aliquid ex ea commodi consequatur?</p>
+                </details>
+            </div>
+
+        </section>
+    </main>
 
     <footer>
-        <p><i class="fa-solid fa-shoe-prints"></i> Footer Example</p>
+        <h5 class="text-light">Bread.CSS - A CSS Framework created using Sass and Sass partials.</h5>
+        <h6 class="text-light">Contributors: Taro Routly, Taylor Baker, Lauren Brunet, Paul Decker Created for MTM6407 -
+            Web Development IV</h6>
     </footer>
 
 </body>
